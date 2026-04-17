@@ -107,11 +107,15 @@ name = "my-py5-project"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "jpype1" },
     { name = "py5" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "py5", specifier = ">=0.10.9a1" }]
+requires-dist = [
+    { name = "jpype1", specifier = ">=1.6.0" },
+    { name = "py5", specifier = ">=0.10.9a1" },
+]
 
 [[package]]
 name = "numpy"
