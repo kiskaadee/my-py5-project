@@ -1,0 +1,11 @@
+[
+  {
+    "label": "Run py5 Sketch",
+    "command": "uv run py5-run-sketch",
+    "args": ["${ZED_FILE}"],
+    "env": {
+      "JAVA_HOME": "/path/to/your/jdk",
+    },
+    "use_new_terminal": true,
+  },
+]

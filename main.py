@@ -1,6 +1,20 @@
-def main():
-    print("Hello from my-py5-project!")
+# pyright: reportUndefinedVariable=false
 
+def settings():
+    size(600, 600)
 
-if __name__ == "__main__":
-    main()
+def setup():
+    rect_mode(CENTER)
+    # Essential for Arch/Wayland to prevent stuttering
+    hint(DISABLE_TEXTURE_MIPMAPS) 
+
+def draw():
+    background(30)
+    fill(0, 255, 200)
+    # The runner makes these live and global automatically
+    square(mouse_x, mouse_y, 50)
+
+def mouse_clicked():
+    # Use random_int directly
+    fill(random_int(255), random_int(255), random_int(255))
+    print(f"Live click at: {mouse_x}, {mouse_y}")
