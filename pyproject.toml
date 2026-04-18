@@ -13,3 +13,8 @@ dependencies = [
 dev = [
     "watchfiles>=1.1.1",
 ]
+
+[tool.ruff.lint]
+# F821 is the code for "Undefined name"
+# Disable linting flags as runtime via py5-run-sketch injects the missing global names
+ignore = ["F821"]

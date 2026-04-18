@@ -4,8 +4,8 @@
     "command": "uv run py5-run-sketch",
     "args": ["${ZED_FILE}"],
     "env": {
-      "JAVA_HOME": "/path/to/your/jdk",
+      "JAVA_HOME": "/path/to/your/jdk"
     },
-    "use_new_terminal": true,
-  },
+    "use_new_terminal": true
+  }
 ]
