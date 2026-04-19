@@ -16,9 +16,3 @@ def draw():
     fill(0, 255, 200)
     # The runner makes these live and global automatically
     square(mouse_x, mouse_y, 50)
-
-
-def mouse_clicked():
-    # Use random_int directly
-    fill(random_int(255), random_int(255), random_int(255))
-    print(f"Live click at: {mouse_x}, {mouse_y}")
