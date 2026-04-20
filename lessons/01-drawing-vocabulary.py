@@ -20,10 +20,12 @@ def setup():
     stroke_weight(5)  # Set the thickness of the 'pen' line
 
     # 4. Drawing the Shape
-    # rect(x, y, w, h) uses the current state (Green fill, Red thick stroke).
-    # width/2 and height/2 use the system variables to find the center.
+    # rect(x, y, w, h)
+    # MENTAL MODEL: The "Anchor Point".
+    # By default, py5 uses 'rect_mode(CORNER)', meaning the (x, y)
+    # you provide is the top-left corner.
+    # width/2 and height/2 use the system variables to find the canvas center.
     rect(width / 2, height / 2, 200, 50)
-
     # 5. Updating the "State" (The "State Machine" Logic)
     # We must explicitly change the settings, or the next shape will
     # still be Green with a Red 5px border.
@@ -31,5 +33,13 @@ def setup():
     fill(255, 255, 0)  # Switches the 'paint' color to Yellow
 
     # 6. Drawing the next shape
-    # This ellipse inherits the Yellow fill and the 'no_stroke' state.
+    # MENTAL MODEL: Ellipses default to 'ellipse_mode(CENTER)'.
+    # Unlike the rectangle above, this (x, y) is the middle of the shape.
     ellipse(200, 100, 300, 50)
+
+
+# TUTORIAL SUMMARY:
+# - States: fill(), stroke(), and stroke_weight() are 'sticky'. They stay
+#   active until you overwrite them.
+# - Defaults: Rectangles draw from CORNER; Ellipses draw from CENTER.
+# - Math: You can perform operations inside arguments (like width / 2).
